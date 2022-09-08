@@ -14,3 +14,14 @@ class Student:
     @property
     def full_name(self):
         return f"{self._first_name} {self._last_name}"
+
+    @property
+    def email(self):
+        return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+
+    def alert_principal(self):
+        self.suspended = True
+
+
+john = Student('John', 'Doe')
+print(john.email)
